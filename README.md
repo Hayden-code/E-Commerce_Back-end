@@ -33,8 +33,8 @@ _ENTER SCREENSHOTS HERE_
 
 # Installations
 
-    Open integrated terminal and type "npm install" to install all dependencies. NPM packages include: Sequalize, mysql, dotenv and express.
-    You are also required to have Node, MySQL and Postman installed on your device.
+Open integrated terminal and type "npm install" to install all dependencies. NPM packages include: Sequalize, mysql, dotenv and express.
+You are also required to have Node, MySQL and Postman installed on your device.
 
 # Usage
 
@@ -42,11 +42,11 @@ Once all installations have been completed, follow the [walkthrough video](https
 
 # Contributing
 
-    Pull request, contact me for inquiries.
+Pull request, contact me for inquiries.
 
 # Testing-Procedure
 
-    Make sure the code works before creating a pull request.
+Make sure the code works before creating a pull request.
 
 # Contact
 
