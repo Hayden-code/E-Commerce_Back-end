@@ -29,11 +29,11 @@ router.get("/:id", async (req, res) => {
     });
 
     if (!oneCategory) {
-      res.status(404).json({ message: "No category found with that id!" });
+      res.status(404).json({ message: "No category was found with that id!" });
       return;
     }
 
-    res.status(200).json(res.json(oneCategory));
+    res.status(200).json(oneCategory);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -58,6 +58,10 @@ router.put("/:id", async (req, res) => {
       where: {
         id: req.params.id,
       },
+      include: {
+        model: Product,
+        attributes: ["category_id"],
+      },
     });
 
     if (!categoryData) {
@@ -74,11 +78,12 @@ router.put("/:id", async (req, res) => {
 // Function for deleting category using 'id'
 router.delete("/:id", async (req, res) => {
   try {
-    const deleteData = Category.destroy({
+    const deleteData = await Category.destroy({
       where: {
         id: req.params.id,
       },
     });
+
     if (!deleteData) {
       res.status(404).json({ message: "No category found with that id!" });
       return;

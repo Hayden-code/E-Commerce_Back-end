@@ -6,7 +6,7 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 // get all products
 router.get("/", async (req, res) => {
   try {
-    const productData = await Product.findall();
+    const productData = await Product.findAll();
     res.status(200).json(productData);
   } catch (err) {
     res.status(400).json(err);
@@ -28,6 +28,12 @@ router.get("/:id", async (req, res) => {
         },
       ],
     });
+
+    if (!productData) {
+      res.status(404).json({ message: "No product was found with that id!" });
+      return;
+    }
+
     res.status(200).json(productData);
   } catch (err) {
     res.status(400).json(err);
@@ -123,6 +129,10 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
+    if (!dbCategoryData) {
+      res.status(404).json({ message: "No product found with that id!" });
+      return;
+    }
     res.status(200).json(dbCategoryData);
   } catch (err) {
     res.status(400).json(err);
