@@ -24,7 +24,7 @@
 
 # Description
 
-    Modifying starter code to create an app that will use Express, Sequalize and MySQL to interact with a working database.
+Modifying starter code to create an app that will use Express, Sequalize and MySQL to interact with a working database.
 
 # Screenshots
 
