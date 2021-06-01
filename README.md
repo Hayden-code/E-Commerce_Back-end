@@ -28,7 +28,6 @@ Modifying starter code to create an app that will use Express, Sequalize and MyS
 
 # Screenshots
 
-_ENTER SCREENSHOTS HERE_
 ![Screenshot of project](./Media/Screenshot.jpeg)
 
 # Installations
